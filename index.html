@@ -7,7 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Immoprices</title>
+    <title>Wohnungspreise einfach ermitteln</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap_v1.css" rel="stylesheet">
@@ -64,9 +64,24 @@
     
     <div class="container">
       <div class="jumbotron">
-        <h1>Box 1</h1>
-        <label for="QM"> Quadratmeter:</label>
-            <input type="text" name="Quadratmeter" id="qm" value="">
+        <h1>Grundwert</h1>
+          <form role="form">
+            <div class="form-group">
+              <label for="qm">Quadratmeter:</label>
+              <input type="number" class="form-control" id="qm" value="100.0">
+            </div>
+            <div class="form-group">
+              <label for="plz">Postleitzahl:</label>
+              <input type="number" class="form-control" id="plz" value="10000">
+            </div>
+          <div class="checkbox">
+          <label><input type="checkbox"> Balkon</label>
+          </div>
+            <button type="submit" class="btn btn-default" id="grundwert">Wohnungswert berechnen</button>
+          </form>
+          <div class="panel panel-default">
+            <div class="panel-body">Wohnungswert...</div>
+          </div>
         <h3> </h3>
       </div>
     </div>
@@ -81,8 +96,6 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Box 3</h1>
-          
-
         <h3> </h3>
       </div>
     </div>
