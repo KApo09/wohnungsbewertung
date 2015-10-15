@@ -51,7 +51,7 @@
             <li><a href="#">Impressum</a></li>
             <li><a href="#">Legal Information</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Funny Pics</a></li>
+            <li><a href="https://www.google.de/search?q=funny+pics">Funny Pics</a></li>
           </ul>
         </li>
       </ul>
@@ -65,6 +65,7 @@
     <div class="container">
       <div class="jumbotron">
         <h2>1. Grundwert</h2>
+        
           <form role="form">
             <label for="qm">Quadratmeter:</label>
             <div class="input-group">
@@ -101,7 +102,7 @@
           </div>
           <BR />
           <BR />
-            <button type="button" class="btn btn-default" id="grundwert">Wohnungswert berechnen</button>
+            <button type="button" class="btn btn-primary" id="grundwert">Wohnungswert berechnen</button>
           </form>
           <BR />
           <div class="panel panel-info">
@@ -185,7 +186,10 @@
         $("#grundwert").click(function() {
           console.log("Grundwert berechnet.");
           // console.log("Grundwert berechnet.");
-          $("#wohnungswert_ergebnis").text('20');
+          console.log($('#qm').value);
+          value_flat = $('#qm').value * $('#qmpreis').value;
+          console.log(value_flat)
+          $("#wohnungswert_ergebnis").text(value_flat);
         });
 
       // // Load the SDK asynchronously
