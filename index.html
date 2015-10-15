@@ -128,16 +128,16 @@
     <script>
     $(function() {
       // Initialize Parse
-      Parse.initialize("VD3j3OBU9W17spOE1gyrjZS2QiH1hIkmp1bRELM8", "Ldf9nvhoU0g1JPMBrpTyw77EBfuns5VGrpO39Vvq");
+      // Parse.initialize("VD3j3OBU9W17spOE1gyrjZS2QiH1hIkmp1bRELM8", "Ldf9nvhoU0g1JPMBrpTyw77EBfuns5VGrpO39Vvq");
 
-      window.fbAsyncInit = function() {
-          Parse.FacebookUtils.init({
-            appId      : '520142604816883',
-            cookie     : true,  // enable cookies to allow the server to access
-                                // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.3' // use version 2.3
-        });
+      // window.fbAsyncInit = function() {
+      //     Parse.FacebookUtils.init({
+      //       appId      : '520142604816883',
+      //       cookie     : true,  // enable cookies to allow the server to access
+      //                           // the session
+      //       xfbml      : true,  // parse social plugins on this page
+      //       version    : 'v2.3' // use version 2.3
+      //   });
 
         $("#login").click(function() {
           Parse.FacebookUtils.logIn("user_posts", {
@@ -162,21 +162,20 @@
           });
         });
 
-        $("#logout").click(function() {
-          Parse.User.logOut().then(function() {
-            console.log("Logged out.");
-          });
+        $("#grundwert").click(function() {
+          console.log("Grundwert berechnet.");
+          // console.log("Grundwert berechnet.");
+          $("#wohnungswert_ergebnis").text('20');
         });
-      };
 
-      // Load the SDK asynchronously
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      // // Load the SDK asynchronously
+      // (function(d, s, id) {
+      //   var js, fjs = d.getElementsByTagName(s)[0];
+      //   if (d.getElementById(id)) return;
+      //   js = d.createElement(s); js.id = id;
+      //   js.src = "//connect.facebook.net/en_US/sdk.js";
+      //   fjs.parentNode.insertBefore(js, fjs);
+      // }(document, 'script', 'facebook-jssdk'));
     });
   </script>
   </body>
